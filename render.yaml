@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: radiology-ai
+    env: python
+    region: oregon  # Choose nearest region
+    plan: free  # Change if needed
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
